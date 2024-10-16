@@ -3,6 +3,7 @@ import { GeistSans } from "geist/font/sans";
 import type { Metadata } from "next";
 import { iranSans } from "./components/assets/fonts";
 import "./global.css";
+import LenisSmoothScrollProvider from "./providers/LenisSmoothScrollProvider";
 const baseUrl = "https://logoriental.vercel.app";
 
 export const metadata: Metadata = {
@@ -58,7 +59,7 @@ export default function RootLayout({
       <body
         className={`${font.className} antialiased p-6 pb-[102px]  w-full max-w-full mx-auto flex flex-col items-center justify-center`}
       >
-        {children}
+        <LenisSmoothScrollProvider>{children}</LenisSmoothScrollProvider>
       </body>
     </html>
   );

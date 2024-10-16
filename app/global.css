@@ -222,3 +222,45 @@ table {
 .link {
   color: var(--light-90);
 }
+
+/* Lenis Start */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}
+/* Lenis End*/
+
+/* Scrollbar start */
+::-webkit-scrollbar {
+  width: 0.45rem;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #808080d6;
+}
+::-webkit-scrollbar-thumb {
+  transition: color 0.2 ease-in-out;
+  background: #808080;
+  border-radius: 1rem;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Scrollbar end */
