@@ -248,15 +248,15 @@ html.lenis body {
 
 /* Scrollbar start */
 ::-webkit-scrollbar {
-  width: 0.45rem;
+  width: 0.35rem;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #808080d6;
+  background: var(--dark-10);
 }
 ::-webkit-scrollbar-thumb {
   transition: color 0.2 ease-in-out;
-  background: #808080;
+  background: var(--dark-10);
   border-radius: 1rem;
 }
 ::-webkit-scrollbar-track {
