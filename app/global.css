@@ -1,31 +1,40 @@
 @import "tailwindcss";
 
+*,
+*::after,
+*::after {
+  box-sizing: border-box !important;
+}
 ::selection {
-  background-color: #47a3f3;
+  background-color: #b0e8d9;
   color: #fefefe;
 }
 
 :root {
-  --sh-class: #2d5e9d;
-  --sh-identifier: #354150;
-  --sh-sign: #8996a3;
-  --sh-string: #007f7a;
-  --sh-keyword: #e02518;
-  --sh-comment: #a19595;
-  --sh-jsxliterals: #6266d1;
-  --sh-property: #e25a1c;
-  --sh-entity: #e25a1c;
+  --purple-50: #d6ccff;
+  --purple-80: #ac99ff;
+  --green-40: #00cc96;
+  --light-90: #e6e6e6;
+  --light-60: #999999;
+  --dark-10: #1a1a1a;
+  --dark-6: #0f0f0f;
+  --dark-2: #050505;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --sh-class: #4c97f8;
-    --sh-identifier: white;
-    --sh-keyword: #f47067;
-    --sh-string: #0fa295;
+    --purple-50: #d6ccff;
+    --purple-80: #ac99ff;
+    --green-40: #00cc96;
+    --light-90: #e6e6e6;
+    --light-60: #999999;
+    --dark-10: #1a1a1a;
+    --dark-6: #0f0f0f;
+    --dark-2: #050505;
   }
   html {
     color-scheme: dark;
+    font-weight: 500;
   }
 }
 
@@ -167,4 +176,49 @@ table {
   top: 0;
   transform: translate(calc(-50% + 15px), -50%);
   z-index: -1;
+}
+
+.heading-1 {
+  color: var(--light-90);
+  font-size: 36px;
+  line-height: 1.2em;
+  font-weight: 500;
+}
+.heading-2 {
+  color: var(--light-90);
+  font-size: 18px;
+  line-height: 1.2em;
+  font-weight: 500;
+}
+.heading-3 {
+  color: var(--light-90);
+  font-size: 16px;
+  line-height: 1.4em;
+  font-weight: 500;
+}
+.body {
+  color: var(--light-60);
+  font-size: 16px;
+  line-height: 1.4em;
+}
+.quotes {
+  color: var(--light-60);
+  font-size: 16px;
+  line-height: 1.2em;
+}
+.name {
+  color: var(--purple-80);
+  font-size: 24px;
+  line-height: 1.2em;
+  font-weight: 500;
+}
+.role {
+  color: var(--light-60);
+  font-size: 14px;
+  line-height: 1.4em;
+  letter-spacing: 0;
+}
+
+.link {
+  color: var(--light-90);
 }

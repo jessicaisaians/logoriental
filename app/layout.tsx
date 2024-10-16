@@ -1,7 +1,7 @@
 import { GeistMono } from "geist/font/mono";
 import { GeistSans } from "geist/font/sans";
 import type { Metadata } from "next";
-import Footer from "./components/footer";
+import { iranSans } from "./components/assets/fonts";
 import "./global.css";
 const baseUrl = "https://logoriental.vercel.app";
 
@@ -41,21 +41,24 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const font = {
+    dir: "rtl",
+    lang: "fa",
+    className: iranSans.className,
+  };
   return (
     <html
-      lang="fa"
-      dir="rtl"
+      {...font}
       className={cx(
-        "text-black h-screen max-h-screen flex flex-col items-center justify-center overflow-hidden dark:text-white bg-gradient-to-r from-zinc-900 to-black",
+        "text-black h-screen mx-auto max-w-[850px]  items-center justify-center dark:text-white bg-[--dark-2]",
         GeistSans.variable,
         GeistMono.variable
       )}
     >
-      <body className="antialiased max-w-xl mx-4 mt-8 lg:mx-auto">
-        <main className="flex-auto min-w-0 mt-6 flex flex-col px-2 md:px-0">
-          {children}
-          <Footer />
-        </main>
+      <body
+        className={`${font.className} antialiased p-6 pb-[102px]  w-full max-w-full mx-auto flex flex-col items-center justify-center`}
+      >
+        {children}
       </body>
     </html>
   );
