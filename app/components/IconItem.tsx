@@ -2,7 +2,7 @@ import { FC } from "react";
 
 interface IconItemProps {
   title: string;
-  type?: "heading-3" | "heading-2" | "heading-1";
+  type?: "heading-3" | "heading-2" | "heading-1" | string;
   icon: React.ReactElement;
   gap?: string;
 }
