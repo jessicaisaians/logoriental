@@ -155,8 +155,8 @@ table {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 650px;
-  height: 650px;
+  width: 50%;
+  height: 50%;
   border-radius: 100%;
   background-image: linear-gradient(#7e78dc 10%, #4faaff);
   filter: blur(250px);

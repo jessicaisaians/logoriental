@@ -1,30 +1,35 @@
 import Image from "next/image";
-import MouseMove from "./MouseMove";
 
 export default function Page() {
   return (
-    <section className="rounded-[32px] bg-zinc-700/90 backdrop-blur-md p-4 min-h-[80vh] flex flex-col items-center justify-start gap-4">
-      {/* <!--Gradient--> */}
-      <MouseMove />
-      <div className="blob"></div>
-      <div className="h-32 w-32 rounded-full relative overflow-hidden">
-        <Image
-          src={"/images/logOriental.jpg"}
-          fill
-          className="object-cover"
-          alt="Logoriental"
-        />
+    <section className="min-h-[80vh] flex flex-col items-center justify-start gap-4">
+      <div className="flex w-full gap-3 items-center justify-start bg-zinc-900 p-4 rounded-[38px]">
+        <div className="h-[74px] w-[74px] rounded-[28px] relative overflow-hidden">
+          <Image
+            src={"/images/logOriental.jpg"}
+            fill
+            className="object-cover"
+            alt="Logoriental"
+          />
+        </div>
+        <div className="flex flex-col gap-1 mb-2">
+          <h1 className="text-2xl font-semibold tracking-tighter text-blue-400 font-bold">
+            Logoriental
+          </h1>
+          <p className="text-base tracking-tighter">تیم طراحی وب و گرافیک</p>
+        </div>
       </div>
-      <h1 className="mb-8 text-2xl font-semibold tracking-tighter">
-        LogOriental
-      </h1>
-      <p className="mb-4">
-        {`I'm a Vim enthusiast and tab advocate, finding unmatched efficiency in
-        Vim's keystroke commands and tabs' flexibility for personal viewing
-        preferences. This extends to my support for static typing, where its
-        early error detection ensures cleaner code, and my preference for dark
-        mode, which eases long coding sessions by reducing eye strain.`}
-      </p>
+      <div className="flex flex-col w-full gap-3 items-start justify-center bg-zinc-900 p-6 py-8 rounded-[38px]">
+        <p className="text-2xl text-zinc-50 font-bold">
+          سلام! ما تیم Logoriental هستیم!
+        </p>
+        <p className="text-zinc-300 text-base">
+          با عشق به طراحی و خلاقیت، وب‌سایت‌ها و طرح‌های گرافیکی‌ای خلق می‌کنیم
+          که هم زیبا هستند و هم کار کردن با آن‌ها راحت و لذت‌بخش است. توجه به
+          جزئیات و طراحی کاربرپسند همیشه اولویت ماست تا تجربه‌ای عالی برای
+          کاربران رقم بزنیم.
+        </p>
+      </div>
     </section>
   );
 }

@@ -44,8 +44,9 @@ export default function RootLayout({
   return (
     <html
       lang="fa"
+      dir="rtl"
       className={cx(
-        "text-black h-screen dark:text-white bg-gradient-to-r from-zinc-900 to-zinc-700",
+        "text-black h-screen max-h-screen flex flex-col items-center justify-center overflow-hidden dark:text-white bg-gradient-to-r from-zinc-900 to-black",
         GeistSans.variable,
         GeistMono.variable
       )}
