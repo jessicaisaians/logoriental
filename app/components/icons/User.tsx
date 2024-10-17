@@ -6,8 +6,8 @@ interface UserProps {
 }
 
 const User: FC<UserProps> = ({
-  color = "group-hover:stroke-[var(--purple-50)] stroke-[var(--purple-80)] duration-100 transition-all",
-  fill = "group-hover:fill-[var(--purple-50)] fill-[var(--purple-80)] duration-100 transition-all",
+  color = "stroke-[var(--green-40)] duration-100 transition-all",
+  fill = "fill-[var(--green-40)] duration-100 transition-all",
 }) => {
   return (
     <svg
