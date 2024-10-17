@@ -1,9 +1,9 @@
-import { motion } from "framer-motion";
 import { FC } from "react";
 import IconItem from "../IconItem";
 import Stack from "../icons/Stack";
-import ServiceItem from "./ServiceItem";
 import { services } from "./data";
+import ServiceItem from "./ServiceItem";
+import ServiceItemAnimationWrapper from "./ServiceItemAnimationWrapper";
 
 interface ServicesProps {}
 
@@ -15,15 +15,10 @@ const Services: FC<ServicesProps> = ({}) => {
         icon={<Stack color="var(--green-40)" fill="var(--green-40)" />}
       />
       <div className="flex flex-col gap-4">
-        {services.map((ser) => (
-          <motion.div
-            key={ser.title}
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.3, duration: 0.4 }}
-          >
+        {services.map((ser, i) => (
+          <ServiceItemAnimationWrapper i={i} key={ser.title}>
             <ServiceItem ser={ser} />
-          </motion.div>
+          </ServiceItemAnimationWrapper>
         ))}
       </div>
     </div>

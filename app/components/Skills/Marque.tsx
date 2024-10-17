@@ -1,6 +1,6 @@
 "use client";
 import useWindowSize from "app/hooks/useWindowSize";
-import { motion, useSpring } from "framer-motion";
+import { motion } from "framer-motion";
 import React, { useEffect, useRef } from "react";
 
 type MarqueeProps = {
@@ -16,43 +16,36 @@ export const InteractiveMarquee: React.FC<MarqueeProps> = ({
   const { width } = useWindowSize();
   const wWidth = width ?? 300;
 
-  // Spring effect for smooth, continuous movement
-  const speedSpring = useSpring(wWidth * 2, {
-    damping: 40,
-    stiffness: 90,
-    mass: 5,
-  });
-
-  // Trigger animation when the component mounts
   useEffect(() => {
     const marquee = marqueeRef.current;
     if (!marquee) return;
 
-    const marqueeWidth = marquee.scrollWidth;
-
     const startMarquee = () => {
-      speedSpring.set(wWidth + marqueeWidth);
-      marquee.style.transition = `transform ${
-        marqueeWidth / (speed * 100)
-      }s linear`;
-      marquee.style.transform = `translateX(${-marqueeWidth}px)`;
+      const marqueeWidth = marquee.scrollWidth / 2; // Use half the width for seamless scroll
+      const duration = marqueeWidth / (speed * 100);
+      marquee.style.transition = `transform ${duration}s linear`;
+      marquee.style.transform = `translateX(-${marqueeWidth}px)`;
     };
 
-    // Loop the marquee infinitely
     const resetMarquee = () => {
-      marquee.style.transform = `translateX(${-marqueeWidth}px)`;
       marquee.style.transition = "none";
-      requestAnimationFrame(() => startMarquee());
+      marquee.style.transform = `translateX(0)`;
+
+      // Start the marquee again
+      startMarquee();
     };
 
-    marquee.addEventListener("transitionend", resetMarquee);
+    // Start the marquee initially
     startMarquee();
+
+    // Reset the animation after it completes
+    marquee.addEventListener("transitionend", resetMarquee);
 
     // Cleanup event listener
     return () => {
       marquee.removeEventListener("transitionend", resetMarquee);
     };
-  }, [speedSpring, speed, wWidth]);
+  }, [speed, wWidth]);
 
   return (
     <div
@@ -72,12 +65,11 @@ export const InteractiveMarquee: React.FC<MarqueeProps> = ({
           whiteSpace: "nowrap",
         }}
       >
-        {/* Duplicate the children multiple times to create a continuous effect */}
-        {[...Array(3)].map((_, i) => (
-          <div key={i} className="marquee-item">
-            {children}
-          </div>
-        ))}
+        {/* Duplicate the children to create a seamless effect */}
+        <div>{children}</div>
+        <div aria-hidden="true">{children}</div>
+        <div aria-hidden="true">{children}</div>
+        {/* Duplicate to ensure seamless scrolling */}
       </motion.div>
     </div>
   );

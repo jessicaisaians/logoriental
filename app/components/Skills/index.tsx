@@ -18,7 +18,7 @@ const Index: FC<IndexProps> = ({}) => {
         icon={<Diamond color="var(--green-40)" fill="var(--green-40)" />}
         title="مهارت‌ها"
       />
-      <div className="flex flex-col gap-4 max-w-full overflow-hidden">
+      <div className="flex flex-col gap-4 max-w-full w-full overflow-hidden">
         <Row items={["کار با ابزارهای طراحی", "Photoshop", "Illustrator"]} />
         <Row
           speed={0.24}
