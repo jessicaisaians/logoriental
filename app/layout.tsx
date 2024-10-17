@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import { iranSans } from "./components/assets/fonts";
 import "./global.css";
 import LenisSmoothScrollProvider from "./providers/LenisSmoothScrollProvider";
+import ResizeObserverProvider from "./providers/ResizeObserverProvider";
 const baseUrl = "https://logoriental.vercel.app";
 
 export const metadata: Metadata = {
@@ -56,11 +57,13 @@ export default function RootLayout({
         GeistMono.variable
       )}
     >
-      <body
-        className={`${font.className} antialiased p-6 pb-[102px]  w-full max-w-full mx-auto flex flex-col items-center justify-center`}
-      >
-        <LenisSmoothScrollProvider>{children}</LenisSmoothScrollProvider>
-      </body>
+      <ResizeObserverProvider>
+        <body
+          className={`${font.className} antialiased p-6 pb-[102px]  w-full max-w-full mx-auto flex flex-col items-center justify-center`}
+        >
+          <LenisSmoothScrollProvider>{children}</LenisSmoothScrollProvider>
+        </body>
+      </ResizeObserverProvider>
     </html>
   );
 }

@@ -14,8 +14,6 @@ const LenisSmoothScrollProvider: React.FC<LenisSmoothScrollProvider> = ({
         lerp: 0.1,
         duration: 1.5,
         smoothWheel: true,
-        // infinite: true,
-        // syncTouch: true,
       }}
     >
       {children}
