@@ -12,7 +12,7 @@ const Intro: FC<IntroProps> = ({}) => {
       }}
     >
       <h1 className="heading-1">تیم طراحی لوگورینتال </h1>
-      <h1 className="body text-pretty">
+      <h1 className="body text-justify text-wrap md:text-pretty">
         با عشق به طراحی و خلاقیت، وب‌سایت‌ها و طرح‌های گرافیکی‌ای خلق می‌کنیم که
         هم زیبا هستند و هم کار کردن با آن‌ها راحت و لذت‌بخش است. توجه به جزئیات
         و طراحی کاربرپسند همیشه اولویت ماست تا تجربه‌ای عالی برای کاربران رقم
