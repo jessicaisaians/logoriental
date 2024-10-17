@@ -16,7 +16,7 @@ const Location: FC<LocationProps> = ({}) => {
         <Image
           style={{
             maskImage:
-              "radial-gradient(circle at 50% 50%, rgb(0, 0, 0) 60%, rgba(0, 0, 0, 0) 70%)",
+              "radial-gradient(circle at 50% 50%, rgb(0, 0, 0) 40%, rgba(0, 0, 0, 0) 99%)",
           }}
           src={"/images/globe_teh_sm.png"}
           fill

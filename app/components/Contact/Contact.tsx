@@ -14,27 +14,19 @@ const Contact: FC<ContactProps> = ({}) => {
       <IconItem
         type="heading-1 !text-[24px]"
         title="با ما در تماس باشید!"
-        icon={<User color="var(--green-40)" fill="var(--green-40)" />}
+        icon={<User />}
       />
       <div
         className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full"
         style={{ direction: "ltr" }}
       >
-        <InfoCard
-          text="dvin.b@outlook.com"
-          icon={<At color="var(--purple-80)" fill="var(--purple-80)" />}
-        />
-        <InfoCard
-          text="+98 903 40 111 57"
-          icon={<Phone color="var(--purple-80)" fill="var(--purple-80)" />}
-        />
+        <InfoCard text="dvin.b@outlook.com" icon={<At />} />
+        <InfoCard text="+98 903 40 111 57" icon={<Phone />} />
         <InfoCard
           isLink
           href="https://www.instagram.com/logoriental"
           text="@logoriental"
-          icon={
-            <Insta size={21} color="var(--purple-80)" fill="var(--purple-80)" />
-          }
+          icon={<Insta size={21} />}
         />
       </div>
     </div>
