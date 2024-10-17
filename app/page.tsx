@@ -27,7 +27,7 @@ const item = {
   hidden: { opacity: 0, y: -10, scale: 0.9 },
 };
 
-export const CoursesMotionVariants = {
+const CoursesMotionVariants = {
   visible: {
     opacity: 1,
     transition: {
@@ -39,7 +39,7 @@ export const CoursesMotionVariants = {
     transition: { staggerChildren: 0.05 },
   },
 };
-export const CourseCardsMotionVariants = {
+const CourseCardsMotionVariants = {
   hidden: {
     y: 10,
     opacity: 0,
