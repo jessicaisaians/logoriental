@@ -63,7 +63,7 @@ export default function RootLayout({
     >
       <ResizeObserverProvider>
         <body
-          className={`${font.className} antialiased p-6 pb-24 gap-6 w-full max-w-full mx-auto flex flex-col items-center justify-center`}
+          className={`${font.className} antialiased p-6 pb-24 w-full max-w-full mx-auto`}
         >
           <LenisSmoothScrollProvider>
             <PageWrapperAnimation>

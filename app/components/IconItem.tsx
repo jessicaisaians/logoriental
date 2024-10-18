@@ -11,10 +11,10 @@ const IconItem: FC<IconItemProps> = ({
   title,
   icon,
   type = "heading-2",
-  gap = "gap-[10px]",
+  gap = "not-last-child:ml-2.5",
 }) => {
   return (
-    <div className={`${gap} flex items-center`}>
+    <div className={`${gap} flex items-center `}>
       <div className="flex items-center justify-center h-[21px] w-[21px] aspect-square">
         {icon}
       </div>

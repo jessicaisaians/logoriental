@@ -23,7 +23,7 @@ const variants = {
 };
 const Title: FC<TitleProps> = ({}) => {
   return (
-    <motion.div className="flex flex-col gap-[4px]">
+    <motion.div className="flex flex-col  not-last-child:mb-1">
       <motion.h1
         variants={variants}
         className={`${righteous.className} name !text-[22px] text-purple-80`}

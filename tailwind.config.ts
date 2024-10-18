@@ -44,6 +44,11 @@ const config: Config = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    function ({ addVariant }) {
+      // Adds support for targeting all children except the last child
+      addVariant("not-last-child", "& > *:not(:last-child)");
+    },
+  ],
 };
 export default config;

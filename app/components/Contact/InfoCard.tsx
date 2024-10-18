@@ -12,7 +12,7 @@ interface InfoCardProps {
 const baiJamjuree = Bai_Jamjuree({ subsets: ["latin"], weight: "500" });
 const InfoCard: FC<InfoCardProps> = ({ isLink, href, text, icon }) => {
   return (
-    <div className="group col-span-1 p-[18px] bg-dark-10 gap-[11px] flex items-start justify-start flex-nowrap rounded-[21px]">
+    <div className="group col-span-1 p-[18px] bg-dark-10  not-last-child:mr-[11px] flex items-start justify-start flex-nowrap rounded-[21px]">
       {icon}
       {isLink && !!href ? (
         <Link href={href} passHref target="_blank">

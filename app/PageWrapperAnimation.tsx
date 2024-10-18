@@ -26,7 +26,7 @@ export default function PageWrapperAnimation({
         initial={"hidden"}
         animate="visible"
         exit="hidden"
-        className="w-full mx-auto flex flex-col gap-6"
+        className="w-full mx-auto flex flex-col not-last-child:mb-6 "
       >
         {children}
       </motion.div>

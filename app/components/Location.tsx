@@ -7,11 +7,8 @@ interface LocationProps {}
 
 const Location: FC<LocationProps> = ({}) => {
   return (
-    <div className="col-span-1 flex flex-col w-full gap-3 items-start justify-center bg-dark-6 px-6 pt-6 rounded-5xl">
-      <IconItem
-        icon={<MapPin  />}
-        title="تهران، ایران"
-      />
+    <div className="col-span-1 flex flex-col w-full not-last-child:mb-3 items-start justify-center bg-dark-6 px-6 pt-6 rounded-5xl">
+      <IconItem icon={<MapPin />} title="تهران، ایران" />
       <div className="h-[180px] max-w-full w-full md:w-[388px] relative overflow-hidden mt-3">
         <Image
           style={{

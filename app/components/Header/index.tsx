@@ -9,13 +9,13 @@ interface IndexProps {}
 const Index: FC<IndexProps> = ({}) => {
   return (
     <header
-      className="flex flex-wrap w-full gap-3 items-center justify-between bg-dark-6 p-[6px] pl-[19px] rounded-5xl"
+      className="flex flex-wrap w-full not-last-child:ml-3 items-center justify-between bg-dark-6 p-[6px] pl-[19px] rounded-5xl"
       style={{
         boxShadow:
           "rgba(0, 0, 0, 0.18) 0px 0.602187px 0.602187px -1.25px, rgba(0, 0, 0, 0.16) 0px 2.28853px 2.28853px -2.5px, rgba(0, 0, 0, 0.063) 0px 10px 10px -3.75px",
       }}
     >
-      <div className="flex items-center gap-[8px]">
+      <div className="flex items-center  not-last-child:ml-2">
         <Logo />
         <Title />
       </div>

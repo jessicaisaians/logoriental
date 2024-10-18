@@ -10,7 +10,7 @@ interface ContactProps {}
 
 const Contact: FC<ContactProps> = ({}) => {
   return (
-    <div className="rounded-5xl gap-[28px] p-8 flex flex-col items-start justify-center relative w-full max-w-full bg-dark-6">
+    <div className="rounded-5xl not-last-child:mb-7 p-8 flex flex-col items-start justify-center relative w-full max-w-full bg-dark-6">
       <IconItem
         type="heading-1 !text-[24px]"
         title="با ما در تماس باشید!"
