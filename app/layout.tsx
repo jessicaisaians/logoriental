@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-
+import { GoogleAnalytics } from "@next/third-parties/google";
 import { iranSans } from "./components/assets/fonts";
 import Copyright from "./components/Copyright";
 import Header from "./components/Header";
@@ -77,6 +77,7 @@ export default function RootLayout({
             </PageWrapperAnimation>
           </LenisSmoothScrollProvider>
         </body>
+        <GoogleAnalytics gaId={process.env.GOOGLE_ANALYTICS_MEASURMENT_ID} />
       </ResizeObserverProvider>
     </html>
   );
