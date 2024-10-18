@@ -2,9 +2,13 @@ import { GeistMono } from "geist/font/mono";
 import { GeistSans } from "geist/font/sans";
 import type { Metadata } from "next";
 import { iranSans } from "./components/assets/fonts";
+import Copyright from "./components/Copyright";
+import Header from "./components/Header";
 import "./global.css";
+import PageWrapperAnimation from "./PageWrapperAnimation";
 import LenisSmoothScrollProvider from "./providers/LenisSmoothScrollProvider";
 import ResizeObserverProvider from "./providers/ResizeObserverProvider";
+import SectionAnimationWrapper from "./SectionAnimationWrapper";
 const baseUrl = "https://logoriental.vercel.app";
 
 export const metadata: Metadata = {
@@ -61,7 +65,17 @@ export default function RootLayout({
         <body
           className={`${font.className} antialiased p-6 pb-[102px]  w-full max-w-full mx-auto flex flex-col items-center justify-center`}
         >
-          <LenisSmoothScrollProvider>{children}</LenisSmoothScrollProvider>
+          <LenisSmoothScrollProvider>
+            <PageWrapperAnimation>
+              <SectionAnimationWrapper>
+                <Header key="header" />
+              </SectionAnimationWrapper>
+              {children}
+              <SectionAnimationWrapper>
+                <Copyright key="copyright" />
+              </SectionAnimationWrapper>
+            </PageWrapperAnimation>
+          </LenisSmoothScrollProvider>
         </body>
       </ResizeObserverProvider>
     </html>
