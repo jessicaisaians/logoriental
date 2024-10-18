@@ -9,11 +9,8 @@ interface ServicesProps {}
 
 const Services: FC<ServicesProps> = ({}) => {
   return (
-    <div className="rounded-[30px] gap-[28px] p-[32px] flex flex-col items-start justify-center relative w-full max-w-full bg-[var(--dark-6)]">
-      <IconItem
-        title="خدمات"
-        icon={<Stack color="var(--green-40)" fill="var(--green-40)" />}
-      />
+    <div className="rounded-5xl gap-[28px] p-8 flex flex-col items-start justify-center relative w-full max-w-full bg-dark-6">
+      <IconItem title="خدمات" icon={<Stack />} />
       <div className="flex flex-col gap-4">
         {services.map((ser, i) => (
           <ServiceItemAnimationWrapper i={i} key={ser.title}>

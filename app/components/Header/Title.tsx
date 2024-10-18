@@ -4,7 +4,7 @@ import { Righteous } from "next/font/google";
 import { FC } from "react";
 
 interface TitleProps {}
-const baumans = Righteous({
+const righteous = Righteous({
   subsets: ["latin"],
   weight: ["400"],
 });
@@ -26,7 +26,7 @@ const Title: FC<TitleProps> = ({}) => {
     <motion.div className="flex flex-col gap-[4px]">
       <motion.h1
         variants={variants}
-        className={`${baumans.className} name !text-[22px]`}
+        className={`${righteous.className} name !text-[22px] text-purple-80`}
       >
         Logoriental
       </motion.h1>

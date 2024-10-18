@@ -12,10 +12,10 @@ const Row: FC<RowProps> = ({ items, speed }) => {
       <div className="flex items-center justify-between ">
         {items.map((item) => (
           <div className="flex items-center justify-between" key={item}>
-            <div className="h-[36px] p-[12px] min-w-fit  mx-[6px] rounded-[12px] bg-[var(--dark-10)] flex-nowrap flex items-center justify-center w-max">
-              <p className="text-[var(--light-60)]">{item}</p>
+            <div className="h-9 p-3 min-w-fit  mx-1.5 rounded-xl bg-dark-10 flex-nowrap flex items-center justify-center w-max">
+              <p className="text-light-60">{item}</p>
             </div>
-            <Pill color="stroke-[var(--purple-80)] fill-[var(--purple-80)] mx-[6px]" />
+            <Pill color="stroke-purple-80 fill-purple-80 mx-1.5" />
           </div>
         ))}
       </div>

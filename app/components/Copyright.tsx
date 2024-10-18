@@ -9,7 +9,7 @@ const baiJamjuree = Bai_Jamjuree({
 const Copyright: FC<CopyrightProps> = ({}) => {
   return (
     <div
-      className="w-full p-[24px] gap-[12px] rounded-[30px] bg-[var(--dark-6)] flex flex-col items-start justify-between"
+      className="w-full p-6 gap-[12px] rounded-5xl bg-dark-6 flex flex-col items-start justify-between"
       style={{ direction: "ltr" }}
     >
       <p className={`${baiJamjuree.className} role font-light`}>

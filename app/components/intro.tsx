@@ -5,7 +5,7 @@ interface IntroProps {}
 const Intro: FC<IntroProps> = ({}) => {
   return (
     <div
-      className="rounded-[30px] gap-[12px] p-[24px] flex flex-col relative w-full max-w-full bg-[var(--dark-6)]"
+      className="rounded-5xl gap-[12px] p-6 flex flex-col relative w-full max-w-full bg-dark-6"
       style={{
         boxShadow:
           "0 .6021873017743928px .6021873017743928px -1.25px #0000002e,0 2.288533303243457px 2.288533303243457px -2.5px #00000029,0 10px 10px -3.75px #00000010",

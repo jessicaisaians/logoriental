@@ -7,8 +7,8 @@ interface InstaProps {
 }
 
 const Insta: FC<InstaProps> = ({
-  color = "group-hover:stroke-[var(--purple-50)] stroke-[var(--purple-80)] duration-100 transition-all",
-  fill = "group-hover:fill-[var(--purple-50)] fill-[var(--purple-80)] duration-100 transition-all",
+  color = "group-hover:stroke-purple-50 stroke-purple-80 duration-100 transition-all",
+  fill = "group-hover:fill-purple-50 fill-purple-80 duration-100 transition-all",
   size = 24,
 }) => {
   return (

@@ -6,8 +6,8 @@ interface UserProps {
 }
 
 const User: FC<UserProps> = ({
-  color = "stroke-[var(--green-40)] duration-100 transition-all",
-  fill = "fill-[var(--green-40)] duration-100 transition-all",
+  color = "stroke-green-40 duration-100 transition-all",
+  fill = "fill-green-40 duration-100 transition-all",
 }) => {
   return (
     <svg

@@ -1,10 +1,9 @@
-import { GeistMono } from "geist/font/mono";
-import { GeistSans } from "geist/font/sans";
 import type { Metadata } from "next";
+
 import { iranSans } from "./components/assets/fonts";
 import Copyright from "./components/Copyright";
 import Header from "./components/Header";
-import "./global.css";
+import "./globals.css";
 import PageWrapperAnimation from "./PageWrapperAnimation";
 import LenisSmoothScrollProvider from "./providers/LenisSmoothScrollProvider";
 import ResizeObserverProvider from "./providers/ResizeObserverProvider";
@@ -40,8 +39,6 @@ export const metadata: Metadata = {
   },
 };
 
-const cx = (...classes) => classes.filter(Boolean).join(" ");
-
 export default function RootLayout({
   children,
 }: {
@@ -55,15 +52,11 @@ export default function RootLayout({
   return (
     <html
       {...font}
-      className={cx(
-        "text-black h-screen mx-auto max-w-[850px]  items-center justify-center dark:text-white bg-[--dark-2]",
-        GeistSans.variable,
-        GeistMono.variable
-      )}
+      className="text-light-90 h-screen mx-auto max-w-4xl items-center justify-center bg-dark-2"
     >
       <ResizeObserverProvider>
         <body
-          className={`${font.className} antialiased p-6 pb-[102px]  w-full max-w-full mx-auto flex flex-col items-center justify-center`}
+          className={`${font.className} antialiased p-6 pb-24 gap-6 w-full max-w-full mx-auto flex flex-col items-center justify-center`}
         >
           <LenisSmoothScrollProvider>
             <PageWrapperAnimation>
