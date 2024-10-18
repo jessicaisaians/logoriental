@@ -9,13 +9,13 @@ const baiJamjuree = Bai_Jamjuree({
 const Copyright: FC<CopyrightProps> = ({}) => {
   return (
     <div
-      className="w-full p-6  not-last-child:mb-3 rounded-5xl bg-dark-6 flex flex-col items-start justify-between"
+      className="w-full p-6  not-last-child:mb-3 rounded-5xl bg-dark-6 flex flex-col items-center xs:items-start justify-between"
       style={{ direction: "ltr" }}
     >
-      <p className={`${baiJamjuree.className} role font-light`}>
+      <p className={`${baiJamjuree.className} role font-light text-center`}>
         © 2021. All rights Reserved.
       </p>
-      <p className={`${baiJamjuree.className} role font-light`}>
+      <p className={`${baiJamjuree.className} role font-light text-center`}>
         Made By <b className="font-bold">Logoriental</b>
       </p>
     </div>

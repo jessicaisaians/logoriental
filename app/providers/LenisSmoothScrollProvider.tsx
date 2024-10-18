@@ -11,7 +11,7 @@ interface LenisSmoothScrollProvider {
 const LenisSmoothScrollProvider: React.FC<LenisSmoothScrollProvider> = ({
   children,
 }) => {
-  const [supported, setSupported] = useState(false);
+  const [supported, setSupported] = useState(true);
   useEffect(() => {
     if (
       typeof window !== "undefined" &&
