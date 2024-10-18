@@ -2,6 +2,7 @@ import "core-js/stable"; // Polyfill ES6+ features
 import "promise-polyfill/src/polyfill"; // Polyfill Promises
 import "regenerator-runtime/runtime"; // Polyfill async/await
 import Contact from "./components/Contact/Contact";
+import ErrorBoundary from "./components/ErrorBoundary";
 import Intro from "./components/intro";
 import Location from "./components/Location";
 import Services from "./components/Services/Services";
@@ -18,12 +19,12 @@ export default function Page() {
     <Contact />,
   ];
   return (
-    <>
+    <ErrorBoundary>
       {components.map((component, i) => (
         <SectionAnimationWrapper key={`comp_${i}`}>
           {component}
         </SectionAnimationWrapper>
       ))}
-    </>
+    </ErrorBoundary>
   );
 }
