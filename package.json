@@ -3,7 +3,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "gen-env-types": "npx gen-env-types .env.development -e . -r .env.example"
   },
   "dependencies": {
     "@studio-freight/react-lenis": "^0.0.47",
